@@ -14,7 +14,7 @@ const CONTRACT_ADDRESS = "0xc0D3139a53b31abB19DABDc5D29c473C9D770D21";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
-  const [currentMinted, setCurrentMinted] = useState();
+  const [currentMinted, setCurrentMinted] = useState(0);
 
   const checkIfWalletIsConnected = async () => {
     if (window.ethereum === undefined) {
@@ -150,7 +150,7 @@ const App = () => {
 
   useEffect(() => {
     checkIfWalletIsConnected();
-  }, []);
+  },);
 
   return (
     <div className="App">
