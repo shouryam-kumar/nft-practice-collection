@@ -88,7 +88,7 @@ contract MyEpicNFT is ERC721URIStorage {
     function mintNFT() public {
         uint256 newItemId = _tokenIds.current();
 
-        require(newItemId <= 50, "The maximum minting limit has been achieved. We hope to see you soon again");
+        require(newItemId <= 50, "The maximum minting limit has been achieved. We hope to see you soon");
 
         //we go and grap one word randomly from each of the arays
 
@@ -100,7 +100,7 @@ contract MyEpicNFT is ERC721URIStorage {
 
         //Concatenating it all together, and then close the <text> and <svg> tags
         string memory finalSvg = string(
-            abi.encodePacked(baseSvg, combinedWord, "<text></svg>")
+            abi.encodePacked(baseSvg, combinedWord, "</text></svg>")
         );
 
         //Get all the JSON metadata in the place an d base64 encode it

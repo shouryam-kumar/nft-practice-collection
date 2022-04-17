@@ -7,7 +7,7 @@ const main = async () => {
 
     await nftContract.deployed();
 
-    console.log("Contract deployed to: ", nftContract.address); // 0x5a00c329a457518E71EdC76e8Eb7EFe060eE1Bd3
+    console.log("Contract deployed to: ", nftContract.address); // 0x5FbDB2315678afecb367f032d93F642f64180aa3
     // let txn = await nftContract.mintNFT()
     // await txn.wait();
     // console.log("minted nft #1")
